@@ -1,0 +1,144 @@
+.messagebox {
+    box-shadow: 0 0 2px #2196f3, 0 0 4px #2196f3, 0 0 6px #2196f3;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+    display: flex;
+    width: 950px;
+    height: 70px;
+    background-color: #06223b;
+}
+.messagebox .border {
+    border-bottom: black 2px solid;
+    width: 100%;
+}
+.messagebox .mbody {
+    width: 100%;
+    padding: 15px 10px 10px 10px;
+    overflow-wrap: break-word;
+    font-size: 23px;
+}
+.messagebox .datee {
+    overflow: hidden !important;
+}
+.messagebox .mcontent {
+    width: 60ch;
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+}
+.messagebox .mbody a {
+    text-decoration: none;
+    color: #2196f3;
+}
+.messagebox .shopnam {
+    float: right;
+}
+.messagebox .shopnam a {
+    text-decoration: none;
+    color: #2196f3;
+}
+#bodybox span a {
+    font-size: 23px;
+    color: #1d3266;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+form input {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 2px solid #0a3255;
+    border-top: 2px solid #0a3255;
+    border-right: 2px solid #0a3255;
+    border-left: 2px solid #0a3255;
+    border-radius: 5px;
+    background: #031321;
+    color: #2196f3;
+    outline: none;
+}
+form input::placeholder {
+    color: #2196f3;
+}
+form select {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 2px solid #0a3255;
+    border-top: 2px solid #0a3255;
+    border-right: 2px solid #0a3255;
+    border-left: 2px solid #0a3255;
+    border-radius: 5px;
+    background: #031321;
+    outline: none;
+    color: #2196f3 !important;
+}
+table a {
+    text-decoration: none;
+    color: #2196f3 !important;
+}
+table td {
+    padding: 20px 20px 20px 0px;
+    text-align: center;
+}
+form u {
+    color: #2196f3;
+}
+form select option {
+    color: #2196f3 !important;
+}
+button {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 2px solid #0f4c80;
+    border-top: 2px solid #0f4c80;
+    border-right: 2px solid #0f4c80;
+    border-left: 2px solid #0f4c80;
+    border-radius: 5px;
+    background: #031321;
+    color: #2196f3 !important;
+    outline: none;
+}
+#bodybox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+    max-width: 700px;
+    max-height: 500px;
+    font: 15px arial, sans-serif;
+    background-color: #031321;
+    border-style: solid;
+    border-width: 1px;
+    color: #2399fa;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 15px;
+}
+#bodybox span a {
+    font-size: 23px;
+    color: #2399fa;
+    text-decoration: none;
+}
+#chatborder {
+    border-bottom: 2px solid #0a3255;
+    border-top: 2px solid #0a3255;
+    border-right: 2px solid #0a3255;
+    border-left: 2px solid #0a3255;
+    border-radius: 5px;
+    background: #031321;
+    width: 100%;
+    height: 270px;
+    resize: none;
+    border-width: 3px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 15px;
+}

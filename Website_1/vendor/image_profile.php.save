@@ -1,0 +1,16 @@
+<?php
+
+    session_start();
+    require_once 'connect.php';        
+
+        $path = '../uploads/' . time() . $_FILES['avatar']['name'];
+        if (!moveuploaded_file($_FILES['avatar']['tmp_name'], '../' . $path)) {
+            $_SESSION['message'] = 'Ошибка при загрузке сообщения';
+            header('Location: ../profile.php');
+
+        mysqli_query($connect, "INSERT INTO `users` (`avatar`) VALUES ('$path')");
+
+        $_SESSION['message'] = 'Фотография загружена успешно!';
+        header('Location: ../index.php');
+}
+?>

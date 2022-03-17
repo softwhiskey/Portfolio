@@ -1,0 +1,72 @@
+<?php
+session_start();
+require_once '../app/include/database.php';
+require_once '../app/include/functions.php';
+function convertToBTCFromSatoshi($value){
+    return bcdiv( intval($value), 100000000, 8 );
+}
+if (!$_SESSION['user']) {
+    header('Location: /');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel = "stylesheet" href="..\assets\css\style.css"
+        <meta charset="UTF-8">
+        <title>Главная</title>
+    </head>
+    <body>
+        <h1>Кирилydra</h1>
+        <!--<div class="leftpanel">
+            <span>
+                <a href="../views/profile/profile.php">
+                <span class="icon"></span>
+                <?=
+                $_SESSION['user']['login']
+                ?></a>
+            </span>
+            <span>
+                <a href="../views/profile/profile.php">
+                <span class="icon"></span>
+                <?=
+                $_SESSION['user']['login']
+                ?></a>
+            </span>
+        </div>0.00000001 BTC!-->
+        <div class="topnav">
+            <a id = "main">Главная</a>
+            <a id = "functions">Магазины</a>
+            <a id = "about">Помощь</a>
+            <a style="margin-left: 370px" id = "functions"><?= $_SESSION['user']['login'] ?></a>
+            <a id = "about"><?php
+                $login = $_SESSION['user']['login'];
+                $query = mysqli_query($link,
+                    "SELECT `satoshi` FROM `users` WHERE `login` = '$login'");
+                //print_r($query);
+                $balance = mysqli_fetch_assoc($query);
+                //print(convertToBTCFromSatoshi($balance['satoshi']) . " BTC");
+                ?></a>
+            <a id = "about">Выход</a>
+        </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <ul class="nav navbar-nav">
+                    <?php
+                        $categories = get_categories();
+                    ?>
+                    <?php if(count($categories) === 0): ?>
+                    <?php else: ?>
+
+                    <?php foreach($categories as $category): ?>
+                    <li><a href="catag.php?id=<?=$category["id"]?>"><?=$category["title"]?></a></li>
+                    <?php endforeach; ?>
+
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <hr>
+    </body>
+</html>
