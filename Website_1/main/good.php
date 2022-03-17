@@ -27,7 +27,7 @@ require_once ('../app/include/sec.php');
 <div class="wrapper">
     <div class="content">
         <div class="toppanel" id="shine">
-            <h1 class="titlee">Emerald</h1>
+            <h1 class="titlee">Market</h1>
             <?php createTopPanel(); ?>
         </div>
         <div class="main">
